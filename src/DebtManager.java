@@ -4,6 +4,9 @@ import java.util.Scanner;
 public class DebtManager {
     HashMap <String, Profile> clients = new HashMap<>();
     Scanner scan = new Scanner(System.in);
+    String input;
+    Double balance;
+    char password;
     public void printDebt() {
         System.out.println();
         for (Profile clients : clients.values()) {
@@ -38,7 +41,39 @@ public class DebtManager {
 
     }
     public void updateDebt(){
+        this.printDebt();
+        System.out.println("Enter your username ");
+        input = scan.nextLine();
+        System.out.println("Enter your password ");
+        input = scan.nextLine();
 
+        for (Profile update: clients.values()) {
+            if (update.username == update.getUsername()){
+                System.out.println("What is the new totalDebt?");
+                balance = scan.nextDouble();
+
+                System.out.println("");
+
+
+            }
+            
+        }
+
+
+    }
+    public void delete(){
+        this.printDebt();
+        System.out.println("Enter your username ");
+        input = scan.nextLine();
+
+        System.out.println("Enter your password");
+        password = scan.next().charAt(' ');
+
+        for (String delete : clients.keySet()) {
+            if(delete.equals(password)){
+                this.clients.remove(password);
+            }
+        }
     }
 
 }

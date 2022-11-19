@@ -5,7 +5,7 @@ public class Main {
     static DebtManager afterLife = new DebtManager();
 
     public void plannings(){
-        String mainMenu = "What would you want to do? " + "Apply/login" + "profile" + "Sign out"
+        String mainMenu = "What would you want to do? " + "Apply/login" + "profile" + "Update debt" + "Sign out"
         do{
             System.out.println(mainMenu);
             if(mainMenu.equalsIgnoreCase("Apply/login")){
@@ -13,7 +13,7 @@ public class Main {
             } else if (mainMenu.equalsIgnoreCase("profile")) {
                 afterLife.printDebt();
                 
-            } else if (mainMenu.equalsIgnoreCase()) {
+            } else if (mainMenu.equalsIgnoreCase("Update debt")) {
                 
             }
 

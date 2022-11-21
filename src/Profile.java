@@ -4,9 +4,9 @@ public class Profile {
 //    private
     protected String username;
     protected String password;
-    protected int cardNumber;
+    protected long cardNumber;
 
-    public Profile(String name, int totalDebt, String username, String password, int cardNumber) {
+    public Profile(String name, int totalDebt, String username, String password, long cardNumber) {
         this.name = name;
         this.totalDebt = totalDebt;
         this.username = username;
@@ -46,16 +46,16 @@ public class Profile {
         this.password = password;
     }
 
-    public int getCardNumber() {
+    public long getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(long cardNumber) {
         this.cardNumber = cardNumber;
     }
 
     public void print (){
-        System.out.println(this.name + this.totalDebt + this.username + this.password + this.cardNumber);
+        System.out.println(this.name + " " + this.totalDebt + " " +  this.username + " " +  this.password + " " +  this.cardNumber);
     }
 
 
